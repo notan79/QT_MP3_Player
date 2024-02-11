@@ -262,7 +262,7 @@ void MainWindow::update_songs(const std::string PATH)
     QList<QString> temp;
     std::string cur = "";
     if(songs.length() != 0)
-        std::string cur = songs[0].toStdString();
+        std::string cur = songs[0].toStdString(); // keeps cur at the front of the array
 
     for (const auto &entry : std::filesystem::directory_iterator(PATH)){
         std::string str = entry.path();
